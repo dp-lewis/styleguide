@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAK;EACJ,gBAAgB,ECFO,OAAO;EDG9B,WAAW,EAAE,UAAU",
+"sources": ["../../../scss/styleguide.scss","../../../data/variables.json"],
+"names": [],
+"file": "styleguide.css"
+}
