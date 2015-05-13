@@ -3,13 +3,13 @@
 
 module.exports = function (grunt) {
   grunt.initConfig({
-    site: grunt.file.readJSON('src/data/site.json'),
+    site: grunt.file.readJSON('data/site.json'),
 
     assemble: {
       options: {
         flatten: true,
         assets: '<%= site.destination %>/assets',
-        data: ['src/data/*.{json,yml}', 'package.json'],
+        data: ['data/*.json', 'package.json'],
         layout: 'default.hbs',
         layoutdir: 'templates/layouts',
         partials: ['templates/partials/**/*.{hbs,md}']
@@ -28,6 +28,9 @@ module.exports = function (grunt) {
 
     sass: {
       dist: {
+        options: {
+          require: 'sass-json-vars'
+        },
         files: {
           './output/assets/css/styleguide.css': './scss/styleguide.scss'
         }

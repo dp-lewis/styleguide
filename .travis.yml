@@ -1,6 +1,7 @@
 language: node_js
 before_script:
   - gem install sass --version 3.4.13
+  - gem install sass-json-vars
 script: npm run deploy
 env:
   global:

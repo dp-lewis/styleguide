@@ -1,3 +1,6 @@
+@import "../data/variables.json";
+
 body {
+	background-color: map-get($colors, brand-primary);
 	font-family: sans-serif;
 }
