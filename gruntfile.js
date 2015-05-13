@@ -12,10 +12,10 @@ module.exports = function (grunt) {
         data: ['src/data/*.{json,yml}', 'package.json'],
         layout: 'default.hbs',
         layoutdir: 'templates/layouts',
-        partials: ['templates/includes/**/*.{hbs,md}']
+        partials: ['templates/partials/**/*.{hbs,md}']
       },
       styleguide: {
-        src: 'templates/pages/docs/*.md',
+        src: 'pages/*.md',
         dest: '<%= site.destination %>'
       }
     },
