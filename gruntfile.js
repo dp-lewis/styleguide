@@ -24,12 +24,21 @@ module.exports = function (grunt) {
       build: {
         src: ['<%= site.destination %>']
       }
+    },
+
+    sass: {
+      dist: {
+        files: {
+          './output/assets/css/main.css': './scss/main.scss'
+        }
+      }
     }
 
   });
 
   grunt.loadNpmTasks('assemble');
-  grunt.registerTask('default', ['clean', 'assemble']);
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
+  grunt.registerTask('default', ['clean', 'sass', 'assemble']);
 };
